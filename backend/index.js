@@ -7,15 +7,6 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-// Create MySQL connection
-
-// const db = mysql.createConnection({
-//     host: "localhost",
-//     user: "root",
-//     password: "Amulya@19",
-//     database: "hostel_management"
-// });
-
 
 const db = mysql.createConnection({
     host: process.env.HOST,
@@ -84,23 +75,6 @@ app.get("/students/:registration", (req, res) => {
     });
 });
 
-// app.post("/students/update", (req, res) => {
-//   const { registration, student_name, branch, phone, dob, hostel_number, room_number } = req.body;
-
-//   if (!registration || !student_name || !branch || !phone || !dob || !hostel_number || !room_number) {
-//       return res.status(400).json({ error: " All fields are required" });
-//   }
-
-//   const query = `INSERT INTO hostel_management (registration, student_name, branch, phone, dob, hostel_number, room_number) VALUES (?, ?, ?, ?, ?, ?, ?)`;
-
-//   db.query(query, [registration, student_name, branch, phone, dob, hostel_number, room_number], (err, result) => {
-//       if (err) {
-//           console.error(" Error inserting student:", err);
-//           return res.status(500).json({ error: "Database error" });
-//       }
-//       res.json({ message: "Student added successfully", studentId: registration });
-//   });
-// });
 
 
 app.put("/students/:registration", (req, res) => {
