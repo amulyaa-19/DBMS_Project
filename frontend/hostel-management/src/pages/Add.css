@@ -1,0 +1,60 @@
+.add-page-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #EDE8F5; /* Light background */
+}
+
+.add-content-box {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  width: 360px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  border: 2px solid #ADBBDA; /* Subtle border */
+}
+
+.add-form-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.add-input-field,
+.add-textarea-field {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #8697C4; /* Input borders */
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: white;
+  color: #3D52A0; /* Text color */
+}
+
+.add-input-field:focus,
+.add-textarea-field:focus {
+  border-color: #7091E6; /* Focus effect */
+  outline: none;
+  box-shadow: 0 0 6px rgba(112, 145, 230, 0.5);
+}
+
+.add-action-button {
+  padding: 12px;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  width: 100%;
+  background-color: #3D52A0; /* Primary button color */
+}
+
+.add-action-button:hover {
+  background-color: #7091E6; /* Hover effect */
+  transform: scale(1.05);
+}
